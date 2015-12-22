@@ -1,13 +1,29 @@
 {
-  "name": "chat-example",
-  "version": "0.0.0",
-  "description": "A chat example to showcase how to use `socket.io` with a static `express` server with `async` for control flow.",
-  "main": "server.js",
-  "repository": "",
-  "author": "Mostafa Eweda <mo.eweda@gmail.com>",
+  "name": "discoverers-chat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yaroslav0507/projectX.git"
+  },
+  "author": "Yaroslav Zaklinsky",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yaroslav0507/projectX/issues"
+  },
+  "homepage": "https://github.com/yaroslav0507/projectX#readme",
   "dependencies": {
-    "async": "~0.2.8",
-    "express": "~3.2.4",
-    "socket.io": "~0.9.14"
+    "dotenv": "^1.2.0",
+    "express": "^4.13.3",
+    "nodemon": "^1.8.1",
+    "require-dir": "^0.3.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0"
   }
 }
