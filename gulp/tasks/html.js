@@ -1,6 +1,6 @@
 'use strict';
 
 gulp.task('html', function(){
-   return gulp.src('./client/app/index.html')
-       .pipe(gulp.dest('dist'));
+   return gulp.src(config.paths.src.template)
+       .pipe(gulp.dest(config.paths.development));
 });

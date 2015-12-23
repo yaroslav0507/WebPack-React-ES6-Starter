@@ -2,9 +2,7 @@
 
 module.exports = function () {
 
-    var template = [
-        './client/app/index.html'
-    ];
+    var template = './client/index.html';
 
     var components = [
         './client/src/app/app.js',
@@ -27,8 +25,8 @@ module.exports = function () {
                     scripts: vendorScripts
                 }
             },
-            development: './dist',
-            release: './release'
+            development: './dist/',
+            release: './release/'
         }
     }
 };
