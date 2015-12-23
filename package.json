@@ -24,12 +24,15 @@
     "require-dir": "^0.3.0"
   },
   "devDependencies": {
+    "bower": "^1.7.1",
     "browser-sync": "^2.10.1",
     "gulp": "^3.9.0",
     "gulp-angular-templatecache": "^1.8.0",
     "gulp-concat": "^2.6.0",
+    "gulp-css-globbing": "^0.1.8",
+    "gulp-sass": "^2.1.1",
     "gulp-sourcemaps": "^1.6.0",
-    "run-sequence": "^1.1.5",
-    "sequence-stream": "^0.1.0"
+    "merge2": "^0.3.6",
+    "run-sequence": "^1.1.5"
   }
 }
