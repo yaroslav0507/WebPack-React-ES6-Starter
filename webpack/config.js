@@ -1,12 +1,12 @@
 'use strict';
 
-var webpack = require('webpack');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-
-const PATHS = {
+global.PATHS = {
     app: './app',
     build: './build'
 };
+
+var devServer = require('./components/dev-server');
+var plugins = require('./components/plugins');
 
 var webpackConfig = {
     entry: PATHS.app,
@@ -28,26 +28,8 @@ var webpackConfig = {
         }]
     },
     devtool: "source-map",
-    sassLoader: {
-        includePaths: [path.resolve(PATHS.app, '/')]
-    },
-    plugins: [
-        new webpack.HotModuleReplacementPlugin(),
-        new HtmlWebpackPlugin({
-            title: 'projectX app'
-        })
-    ],
-    devServer: {
-        historyApiFallback: true,
-        hot: true,
-        inline: true,
-        progress: true,
-        contentBase: PATHS.build,
-        stats: 'errors-only',
-        host: process.env.HOST,
-        port: process.env.PORT,
-        quiet: true
-    }
+    plugins: plugins,
+    devServer: devServer
 };
 
 module.exports = webpackConfig;
