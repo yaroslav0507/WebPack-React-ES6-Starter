@@ -4,10 +4,20 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var webpackConfig = {
-    entry: config.paths.app,
+    entry: './app/index.web.js',
     output: {
-        path: config.paths.build,
+        path: './build',
         filename: 'app.js'
+    },
+    module: {
+        loaders: [{
+            test: /\.js?$/,
+            exclude: /node_modules/,
+            loader: "babel",
+            query: {
+                presets:['react']
+            }
+        }]
     },
     plugins: [
         new HtmlWebpackPlugin({
