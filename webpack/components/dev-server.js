@@ -9,5 +9,5 @@ module.exports = {
     stats: 'errors-only',
     host: process.env.HOST,
     port: process.env.PORT,
-    quiet: true
+    quiet: false
 };
