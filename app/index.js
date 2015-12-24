@@ -1,6 +1,6 @@
 'use strict';
 
-require('!style!css!./style.css');
+require("./scss/core.scss");
 
 var component = require("./src/component.js")();
 var app = document.createElement('div');

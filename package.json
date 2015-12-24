@@ -16,22 +16,20 @@
     "url": "https://github.com/yaroslav0507/projectX/issues"
   },
   "homepage": "https://github.com/yaroslav0507/projectX#readme",
-  "dependencies": {
-    "css-loader": "^0.23.1",
-    "style-loader": "^0.13.0"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "babelify": "^7.2.0",
     "bower": "^1.7.1",
+    "css-loader": "^0.23.1",
     "dotenv": "^1.2.0",
     "html-webpack-plugin": "^1.7.0",
+    "import-glob-loader": "^1.1.0",
+    "node-sass": "^3.4.2",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
     "react-router": "^1.0.2",
     "reactify": "^1.1.1",
-    "run-sequence": "^1.1.5",
-    "vinyl-source-stream": "^1.1.0",
-    "watchify": "^3.6.1",
+    "sass-loader": "^3.1.2",
+    "style-loader": "^0.13.0",
     "webpack": "^1.12.9",
     "webpack-dev-server": "^1.14.0"
   }

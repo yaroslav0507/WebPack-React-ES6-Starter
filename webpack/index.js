@@ -9,11 +9,23 @@ var webpackConfig = {
         path: config.paths.build,
         filename: 'app.js'
     },
+    module: {
+        loaders: [
+            {
+                test: /\.scss$/,
+                loaders: ["style", "css?sourceMap", "sass?sourceMap", "import-glob-loader"]
+            }
+        ]
+    },
+    devtool: "source-map",
+    sassLoader: {
+        includePaths: [path.resolve(config.paths.app, '/')]
+    },
     plugins: [
+        new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({
             title: 'projectX app'
-        }),
-        new webpack.HotModuleReplacementPlugin()
+        })
     ],
     devServer: {
         historyApiFallback: true,
@@ -23,7 +35,8 @@ var webpackConfig = {
         contentBase: config.paths.build,
         stats: 'errors-only',
         host: process.env.HOST,
-        port: process.env.PORT
+        port: process.env.PORT,
+        quiet: true
     }
 };
 
