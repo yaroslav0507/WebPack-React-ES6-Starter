@@ -2,20 +2,18 @@
 
 module.exports = function() {
 
-    var BUILD_DIRECTORY = './build/';
-    var SOURCE_DIRECTORY = './app/';
+    const BUILD_DIRECTORY = './build';
+    const SOURCE_DIRECTORY = './app';
 
     var scripts = {
-        input: SOURCE_DIRECTORY + 'index.web.js',
-        output: BUILD_DIRECTORY + 'app.js'
+        app: SOURCE_DIRECTORY,
+        build: BUILD_DIRECTORY
     };
 
     return {
         paths: {
-            scripts: {
-                input: scripts.input,
-                output: scripts.output
-            }
+            app: scripts.app,
+            build: scripts.build
         }
     }
 };

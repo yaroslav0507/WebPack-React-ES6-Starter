@@ -1,19 +1,30 @@
 'use strict';
 
-global.config = require('./config.js')();
+var webpack = require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
-require('dotenv').load();
-
-
-module.exports = {
-    entry: config.paths.scripts.input,
+var webpackConfig = {
+    entry: config.paths.app,
     output: {
-        paths: __dirname,
-        filename: config.paths.scripts.output
+        path: config.paths.build,
+        filename: 'app.js'
     },
-    module: {
-        loaders: [
-            { test: /\.css$/, loader: 'style!css'}
-        ]
+    plugins: [
+        new HtmlWebpackPlugin({
+            title: 'projectX app'
+        }),
+        new webpack.HotModuleReplacementPlugin()
+    ],
+    devServer: {
+        historyApiFallback: true,
+        hot: true,
+        inline: true,
+        progress: true,
+        contentBase: config.paths.build,
+        stats: 'errors-only',
+        host: process.env.HOST,
+        port: process.env.PORT
     }
 };
+
+module.exports = webpackConfig;

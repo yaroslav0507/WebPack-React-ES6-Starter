@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack --progress --colors --watch",
-    "serve": "webpack-dev-server --port 4000 --content-base ./build"
+    "start": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -25,6 +24,7 @@
     "babelify": "^7.2.0",
     "bower": "^1.7.1",
     "dotenv": "^1.2.0",
+    "html-webpack-plugin": "^1.7.0",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
     "react-router": "^1.0.2",
