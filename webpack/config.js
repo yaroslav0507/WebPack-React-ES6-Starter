@@ -1,19 +1,53 @@
 'use strict';
 
-module.exports = function() {
+var webpack = require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
-    const BUILD_DIRECTORY = './build';
-    const SOURCE_DIRECTORY = './app';
+const PATHS = {
+    app: './app',
+    build: './build'
+};
 
-    var scripts = {
-        app: SOURCE_DIRECTORY,
-        build: BUILD_DIRECTORY
-    };
-
-    return {
-        paths: {
-            app: scripts.app,
-            build: scripts.build
-        }
+var webpackConfig = {
+    entry: PATHS.app,
+    output: {
+        path: PATHS.build,
+        filename: 'app.js'
+    },
+    module: {
+        loaders: [{
+            test: /\.js?$/,
+            exclude: /node_modules/,
+            loader: "babel",
+            query: {
+                presets: ['react']
+            }
+        }, {
+            test: /\.scss$/,
+            loaders: ["style", "css?sourceMap", "sass?sourceMap", "import-glob-loader"]
+        }]
+    },
+    devtool: "source-map",
+    sassLoader: {
+        includePaths: [path.resolve(PATHS.app, '/')]
+    },
+    plugins: [
+        new webpack.HotModuleReplacementPlugin(),
+        new HtmlWebpackPlugin({
+            title: 'projectX app'
+        })
+    ],
+    devServer: {
+        historyApiFallback: true,
+        hot: true,
+        inline: true,
+        progress: true,
+        contentBase: PATHS.build,
+        stats: 'errors-only',
+        host: process.env.HOST,
+        port: process.env.PORT,
+        quiet: true
     }
 };
+
+module.exports = webpackConfig;
