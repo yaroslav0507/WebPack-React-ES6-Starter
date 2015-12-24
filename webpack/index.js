@@ -4,26 +4,35 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var webpackConfig = {
-    entry: './app/index.web.js',
+    entry: config.paths.app,
     output: {
-        path: './build',
+        path: config.paths.build,
         filename: 'app.js'
     },
     module: {
-        loaders: [{
-            test: /\.js?$/,
-            exclude: /node_modules/,
-            loader: "babel",
-            query: {
-                presets:['react']
+        loaders: [
+            {
+                test: /\.scss$/,
+                loaders: ["style", "css?sourceMap", "sass?sourceMap", "import-glob-loader"]
+            },{
+                test: /\.js?$/,
+                exclude: /node_modules/,
+                loader: "babel",
+                query: {
+                    presets:['react']
+                }
             }
-        }]
+        ]
+    },
+    devtool: "source-map",
+    sassLoader: {
+        includePaths: [path.resolve(config.paths.app, '/')]
     },
     plugins: [
+        new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({
             title: 'projectX app'
-        }),
-        new webpack.HotModuleReplacementPlugin()
+        })
     ],
     devServer: {
         historyApiFallback: true,
@@ -33,7 +42,8 @@ var webpackConfig = {
         contentBase: config.paths.build,
         stats: 'errors-only',
         host: process.env.HOST,
-        port: process.env.PORT
+        port: process.env.PORT,
+        quiet: true
     }
 };
 
