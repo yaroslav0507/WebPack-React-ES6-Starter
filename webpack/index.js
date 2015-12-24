@@ -10,19 +10,17 @@ var webpackConfig = {
         filename: 'app.js'
     },
     module: {
-        loaders: [
-            {
-                test: /\.scss$/,
-                loaders: ["style", "css?sourceMap", "sass?sourceMap", "import-glob-loader"]
-            },{
-                test: /\.js?$/,
-                exclude: /node_modules/,
-                loader: "babel",
-                query: {
-                    presets:['react']
-                }
+        loaders: [{
+            test: /\.js?$/,
+            exclude: /node_modules/,
+            loader: "babel",
+            query: {
+                presets: ['react']
             }
-        ]
+        }, {
+            test: /\.scss$/,
+            loaders: ["style", "css?sourceMap", "sass?sourceMap", "import-glob-loader"]
+        }]
     },
     devtool: "source-map",
     sassLoader: {

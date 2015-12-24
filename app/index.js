@@ -2,9 +2,9 @@
 
 require("./scss/core.scss");
 
-var component = require("./src/component.js")();
-var app = document.createElement('div');
+var ReactDOM = require('react-dom');
+var React = require('react');
 
-document.body.appendChild(app);
+var HomePage = require("./pages/homePage.js");
 
-app.appendChild(component);
+ReactDOM.render(<HomePage />, document.body);
