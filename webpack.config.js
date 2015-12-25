@@ -1,5 +1,6 @@
 'use strict';
 
+global.webpack = require('webpack');
 global.path = require('path');
 require('dotenv').load();
 
