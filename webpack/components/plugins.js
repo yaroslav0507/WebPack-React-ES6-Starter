@@ -5,5 +5,8 @@ module.exports = [
     new HtmlWebpackPlugin({
         template: path.join(PATHS.app, '/index.html'),
         inject: 'body'
+    }),
+    new ExtractTextPlugin('app.css', {
+        allChunks: true
     })
 ];
