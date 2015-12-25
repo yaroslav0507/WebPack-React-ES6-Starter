@@ -3,6 +3,8 @@
 var React = require('react');
 const names = ['John', 'Jill', 'Jack', 'Борис'];
 
+var sidebar = require('./components/sidebar');
+
 class HomePage extends React.Component{
 
     render() {
