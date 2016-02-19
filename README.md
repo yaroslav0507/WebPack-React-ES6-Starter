@@ -1,7 +1,6 @@
 # WebPack_Angular_ES6_Starter Kit
 
 ## Stack of technologies
-<img align="right" src="https://www.dropbox.com/s/yg1rsufwp2pbcfq/MEAN_Stack.png?dl=1" alt="MEAN Stack" height="150px">
 - [WebPack](https://webpack.github.io/);
 - [Angular JS](https://angularjs.org/);
 - [Karma](https://karma-runner.github.io/0.13/index.html);
