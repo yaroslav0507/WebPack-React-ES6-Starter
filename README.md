@@ -1,8 +1,8 @@
-# WebPack_Angular_ES6_Starter Kit
+# WebPack_React_ES6_Starter Kit
 
 ## Stack of technologies
 - [WebPack](https://webpack.github.io/);
-- [Angular JS](https://angularjs.org/);
+- [React JS](https://https://facebook.github.io/react/);
 - [Karma](https://karma-runner.github.io/0.13/index.html);
 - [Mocha](https://mochajs.org/);
 - [Sinon](http://sinonjs.org/);
@@ -13,7 +13,7 @@
 Make sure you have [Node.js](http://nodejs.org/) installed.
 
 ```sh
-$ git clone git@github.com:yaroslav0507/WebPack_Angular_ES6_Starter.git # or clone your own fork
+$ git clone git@github.com:yaroslav0507/WebPack_React_ES6_Starter.git # or clone your own fork
 $ npm install
 $ npm start
 $ npm test or configure test runner in IDE
