@@ -1,3 +1,4 @@
+[![npm version](https://badge.fury.io/js/react-es6-starter.svg)](https://badge.fury.io/js/react-es6-starter)
 # WebPack_React_ES6_Starter Kit
 
 ## Stack of technologies
