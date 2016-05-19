@@ -1,5 +1,5 @@
 {
-  "name": "discoverers-chat",
+  "name": "react-es6-starter",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yaroslav0507/projectX.git"
+    "url": "git+https://github.com/yaroslav0507/WebPack-React-ES6-Starter.git"
   },
   "author": "Yaroslav Zaklinsky",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/yaroslav0507/projectX/issues"
+    "url": "https://github.com/yaroslav0507/WebPack-React-ES6-Starter/issues"
   },
-  "homepage": "https://github.com/yaroslav0507/projectX#readme",
+  "homepage": "https://github.com/yaroslav0507/WebPack-React-ES6-Starter#readme",
   "dependencies": {
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-stage-0": "^6.3.13",
