@@ -2,9 +2,12 @@
 
 require("./scss/core.scss");
 
-var ReactDOM = require('react-dom');
-var React = require('react');
-var HomePage = require("./pages/home/homePage.js");
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-var app = document.getElementById('content');
-ReactDOM.render(<HomePage />, app);
+import HomePage from './pages/home/homePage';
+
+ReactDOM.render(
+    <HomePage />,
+    document.getElementById('content')
+);
